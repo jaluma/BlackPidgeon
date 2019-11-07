@@ -34,7 +34,7 @@ This is the package layout convention followed:
   │   └── Scenes
   │   └── Scripts
   ├── Packages
-  ├── ProjectSettings
+  └── ProjectSettings
  ```
 
 ## Built With
@@ -55,9 +55,10 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **María Isabel Fernández Pérez** -  [isafdezpe](https://github.com/isafdezpe)
 * **Cristina Ruiz de Bucesta Crespo** -  [kryystinn](https://github.com/kryystinn)
 * **Christian Peláez Fernández** - [christianpe98](https://github.com/christianpe98)
+* **Miguel Meana Linares** - [meana96](https://github.com/meana96)
 
 See also the list of [contributors](https://github.com/jaluma/RAA-Palomo-simulator/graphs/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the GPL License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GPL License - see the [LICENSE](LICENSE) file for details.
