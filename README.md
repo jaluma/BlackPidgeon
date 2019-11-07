@@ -35,7 +35,7 @@ This is the package layout convention followed:
   │   └── Scripts
   ├── Packages
   ├── ProjectSettings
-	   ```
+ ```
 
 ## Built With
 
