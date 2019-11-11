@@ -2,31 +2,25 @@ fileFormatVersion: 2
 guid: 78c832d7f166910419a0f47b303b6898
 ScriptedImporter:
   fileIDToRecycleName:
-    100000: stucco/stucco
-    400000: stucco/stucco/Transform
-    2100000: mat.stucco
-    2100002: mat.stucco_1
-    2300000: stucco/stucco/MeshRenderer
-    2800000: stucco_baseColor
-    2800002: stucco_normal
-    2800004: stucco_metallic
-    2800006: stucco_height
-    2800008: stucco_1_baseColor
-    2800010: stucco_1_normal
-    2800012: stucco_1_metallic
-    2800014: stucco_1_height
-    3300000: stucco/stucco/MeshFilter
+    2100004: stucco
+    2100006: stucco_1
+    2800016: stucco - baseColor
+    2800018: stucco - normal
+    2800020: stucco - metallic
+    2800022: stucco - height
+    2800024: stucco_1 - baseColor
+    2800026: stucco_1 - normal
+    2800028: stucco_1 - metallic
+    2800030: stucco_1 - height
     11400000: sbsar
     11400002: graph0
     11400004: graph1
-    13500000: stucco/stucco/SphereCollider
-    100100000: stucco
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 232528478, guid: 43a8bbf65be290d44ba52b94476242b9, type: 3}
-  version: 13
+  version: 23
   mGraphInstanceData:
   - graphLabel: stucco
     prototypeName: stucco
@@ -35,18 +29,157 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://stucco\" label=\"\" >\n </sbspreset>\n"
     shaderName: Standard
-    outputNames: baseColor,normal,metallic,height
-    texturePackingList:
+    materialProperties:
+      shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+      shaderKeywords: _MAINTEX _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
+      lightmapFlags: 4
+      texEnvs:
+      - name: _BumpMap
+        texture: {fileID: 2800018, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _DetailAlbedoMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _DetailMask
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _DetailNormalMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _EmissionMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _MainTex
+        texture: {fileID: 2800016, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _MetallicGlossMap
+        texture: {fileID: 2800020, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _OcclusionMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _ParallaxMap
+        texture: {fileID: 2800022, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      floats:
+      - name: _BumpScale
+        float: 1
+      - name: _Cutoff
+        float: 0.5
+      - name: _DetailNormalMapScale
+        float: 1
+      - name: _DstBlend
+        float: 0
+      - name: _GlossMapScale
+        float: 1
+      - name: _Glossiness
+        float: 0.5
+      - name: _GlossyReflections
+        float: 1
+      - name: _Metallic
+        float: 0
+      - name: _Mode
+        float: 0
+      - name: _OcclusionStrength
+        float: 1
+      - name: _Parallax
+        float: 0.02
+      - name: _SmoothnessTextureChannel
+        float: 0
+      - name: _SpecularHighlights
+        float: 1
+      - name: _SrcBlend
+        float: 1
+      - name: _UVSec
+        float: 0
+      - name: _ZWrite
+        float: 1
+      colors:
+      - name: _Color
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _EmissionColor
+        color: {r: 0, g: 0, b: 0, a: 1}
+    outputDescList:
     - outputName: baseColor
-      alphaSource: baseColor
+      identifier: basecolor
+      usageName: baseColor
+      channelStr: baseColor
+      label: Base Color
+      usage: 1
+      bImage: 1
+      bNumerical: 0
+      bLinear: 0
     - outputName: normal
-      alphaSource: normal
+      identifier: normal
+      usageName: normal
+      channelStr: normal
+      label: Normal
+      usage: 7
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
     - outputName: roughness
-      alphaSource: roughness
+      identifier: roughness
+      usageName: roughness
+      channelStr: roughness
+      label: Roughness
+      usage: 15
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
     - outputName: metallic
-      alphaSource: smoothness
+      identifier: metallic
+      usageName: metallic
+      channelStr: metallic
+      label: Metallic
+      usage: 28
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
     - outputName: height
-      alphaSource: height
+      identifier: height
+      usageName: height
+      channelStr: height
+      label: Height
+      usage: 9
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    texturePackingList:
+    - targetName: baseColor
+      components:
+      - sourceName: baseColor
+        from: 0
+        to: 3
+    - targetName: normal
+      components:
+      - sourceName: normal
+        from: 0
+        to: 3
+    - targetName: roughness
+      components:
+      - sourceName: roughness
+        from: 0
+        to: 3
+    - targetName: metallic
+      components:
+      - sourceName: smoothness
+        from: 0
+        to: 3
+    - targetName: height
+      components:
+      - sourceName: height
+        from: 0
+        to: 3
     textureParameters:
     - textureName: stucco_roughness
       wrapMode: 0
@@ -68,32 +201,43 @@ ScriptedImporter:
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    colorSpaceList:
-    - outputName: baseColor
-      bLinear: 0
-    - outputName: normal
-      bLinear: 1
-    - outputName: roughness
-      bLinear: 1
-    - outputName: metallic
-      bLinear: 1
-    - outputName: height
-      bLinear: 1
+    - textureName: stucco - baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: stucco - normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: stucco - roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: stucco - metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: stucco - height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList: []
     inputTextureMap: []
     targetSettingList:
-    - label: 
+    - label: Default
+      bOverride: 0
       bLockRatio: 1
-      bHighQuality: 0
       textureWidth: 256
       textureHeight: 256
-      textureFormat: 0
+      textureFormatMode: 0
+      normalCompressed: 0
       bGenerateOnLoad: 1
-    material: {fileID: 2100000, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+    material: {fileID: 2100004, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
     generatedTextures:
-    - {fileID: 2800000, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
-    - {fileID: 2800002, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
-    - {fileID: 2800004, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
-    - {fileID: 2800006, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+    - {fileID: 2800016, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+    - {fileID: 2800018, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+    - {fileID: 2800020, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+    - {fileID: 2800022, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
   - graphLabel: stucco_1
     prototypeName: stucco
     graphDescIndex: 0
@@ -105,18 +249,157 @@ ScriptedImporter:
       identifier=\"color2\" uid=\"4142599190\" type=\"3\" value=\"0.867925,0.867925,0.867925,1\"
       />\n </sbspreset>\n"
     shaderName: Standard
-    outputNames: baseColor,normal,metallic,height
-    texturePackingList:
+    materialProperties:
+      shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+      shaderKeywords: _MAINTEX _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
+      lightmapFlags: 4
+      texEnvs:
+      - name: _BumpMap
+        texture: {fileID: 2800026, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _DetailAlbedoMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _DetailMask
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _DetailNormalMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _EmissionMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _MainTex
+        texture: {fileID: 2800024, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _MetallicGlossMap
+        texture: {fileID: 2800028, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _OcclusionMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _ParallaxMap
+        texture: {fileID: 2800030, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      floats:
+      - name: _BumpScale
+        float: 1
+      - name: _Cutoff
+        float: 0.5
+      - name: _DetailNormalMapScale
+        float: 1
+      - name: _DstBlend
+        float: 0
+      - name: _GlossMapScale
+        float: 1
+      - name: _Glossiness
+        float: 0.5
+      - name: _GlossyReflections
+        float: 1
+      - name: _Metallic
+        float: 0
+      - name: _Mode
+        float: 0
+      - name: _OcclusionStrength
+        float: 1
+      - name: _Parallax
+        float: 0.02
+      - name: _SmoothnessTextureChannel
+        float: 0
+      - name: _SpecularHighlights
+        float: 1
+      - name: _SrcBlend
+        float: 1
+      - name: _UVSec
+        float: 0
+      - name: _ZWrite
+        float: 1
+      colors:
+      - name: _Color
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _EmissionColor
+        color: {r: 0, g: 0, b: 0, a: 1}
+    outputDescList:
     - outputName: baseColor
-      alphaSource: baseColor
+      identifier: basecolor
+      usageName: baseColor
+      channelStr: baseColor
+      label: Base Color
+      usage: 1
+      bImage: 1
+      bNumerical: 0
+      bLinear: 0
     - outputName: normal
-      alphaSource: normal
+      identifier: normal
+      usageName: normal
+      channelStr: normal
+      label: Normal
+      usage: 7
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
     - outputName: roughness
-      alphaSource: roughness
+      identifier: roughness
+      usageName: roughness
+      channelStr: roughness
+      label: Roughness
+      usage: 15
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
     - outputName: metallic
-      alphaSource: smoothness
+      identifier: metallic
+      usageName: metallic
+      channelStr: metallic
+      label: Metallic
+      usage: 28
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
     - outputName: height
-      alphaSource: height
+      identifier: height
+      usageName: height
+      channelStr: height
+      label: Height
+      usage: 9
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    texturePackingList:
+    - targetName: baseColor
+      components:
+      - sourceName: baseColor
+        from: 0
+        to: 3
+    - targetName: normal
+      components:
+      - sourceName: normal
+        from: 0
+        to: 3
+    - targetName: roughness
+      components:
+      - sourceName: roughness
+        from: 0
+        to: 3
+    - targetName: metallic
+      components:
+      - sourceName: smoothness
+        from: 0
+        to: 3
+    - targetName: height
+      components:
+      - sourceName: height
+        from: 0
+        to: 3
     textureParameters:
     - textureName: stucco_1_roughness
       wrapMode: 0
@@ -138,29 +421,40 @@ ScriptedImporter:
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    colorSpaceList:
-    - outputName: baseColor
-      bLinear: 0
-    - outputName: normal
-      bLinear: 1
-    - outputName: roughness
-      bLinear: 1
-    - outputName: metallic
-      bLinear: 1
-    - outputName: height
-      bLinear: 1
+    - textureName: stucco_1 - baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: stucco_1 - normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: stucco_1 - roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: stucco_1 - metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: stucco_1 - height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList: []
     inputTextureMap: []
     targetSettingList:
-    - label: 
+    - label: Default
+      bOverride: 0
       bLockRatio: 1
-      bHighQuality: 0
       textureWidth: 512
       textureHeight: 512
-      textureFormat: 0
+      textureFormatMode: 0
+      normalCompressed: 0
       bGenerateOnLoad: 1
-    material: {fileID: 2100002, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+    material: {fileID: 2100006, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
     generatedTextures:
-    - {fileID: 2800008, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
-    - {fileID: 2800010, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
-    - {fileID: 2800012, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
-    - {fileID: 2800014, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+    - {fileID: 2800024, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+    - {fileID: 2800026, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+    - {fileID: 2800028, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
+    - {fileID: 2800030, guid: 78c832d7f166910419a0f47b303b6898, type: 3}
