@@ -1,0 +1,86 @@
+fileFormatVersion: 2
+guid: c18e660025cf20c43bd3118ae1ebabba
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: metal/metal
+    400000: metal/metal/Transform
+    2100000: mat.metal
+    2300000: metal/metal/MeshRenderer
+    2800000: metal_baseColor
+    2800002: metal_normal
+    2800004: metal_metallic
+    2800006: metal_height
+    3300000: metal/metal/MeshFilter
+    11400000: sbsar
+    11400002: graph0
+    13500000: metal/metal/SphereCollider
+    100100000: metal
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 232528478, guid: 43a8bbf65be290d44ba52b94476242b9, type: 3}
+  version: 13
+  mGraphInstanceData:
+  - graphLabel: metal
+    prototypeName: metal
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://metal\" label=\"\" >\n </sbspreset>\n"
+    shaderName: Standard
+    outputNames: baseColor,normal,metallic,height
+    texturePackingList:
+    - outputName: baseColor
+      alphaSource: baseColor
+    - outputName: normal
+      alphaSource: normal
+    - outputName: roughness
+      alphaSource: roughness
+    - outputName: metallic
+      alphaSource: smoothness
+    - outputName: height
+      alphaSource: height
+    textureParameters:
+    - textureName: metal_roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: metal_baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: metal_normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: metal_metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: metal_height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList:
+    - outputName: baseColor
+      bLinear: 0
+    - outputName: normal
+      bLinear: 1
+    - outputName: roughness
+      bLinear: 1
+    - outputName: metallic
+      bLinear: 1
+    - outputName: height
+      bLinear: 1
+    inputTextureMap: []
+    targetSettingList:
+    - label: 
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 256
+      textureHeight: 256
+      textureFormat: 0
+      bGenerateOnLoad: 1
+    material: {instanceID: 0}
+    generatedTextures: []
