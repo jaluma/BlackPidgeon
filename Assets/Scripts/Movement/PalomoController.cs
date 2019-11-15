@@ -2,13 +2,9 @@
 using UnityEngine;
 
 public class PalomoController : MonoBehaviour {
-    public float ForwardThrustForce = 40.0f;
+    public float TurnForceMultiplier = 1;
+    public float MaxSpeed = 50.0f;
 
-    public float TurnForceMultiplier = 20;
-
-    public float MaxSpeed = 100.0f;
-
-    private Vector3 _controlForce;
     private Rigidbody _rigidBody;
     private Camera _mainCamera;
 
@@ -26,15 +22,15 @@ public class PalomoController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (_flying) {
-            float x = _mainCamera.transform.forward.x;
-            float y = _mainCamera.transform.forward.y;
+            var forward = _mainCamera.transform.forward;
+            //var right = _mainCamera.transform.right;
 
-            _controlForce.Set(
-                x * TurnForceMultiplier,
-                y * TurnForceMultiplier,
-                1.0f
-            );
-            _controlForce = _controlForce.normalized * ForwardThrustForce;
+            forward.Normalize();
+            //right.Normalize();
+
+            var desiredMoveDirection = forward;
+            transform.Translate(desiredMoveDirection * MaxSpeed * Time.deltaTime);
+            transform.forward = desiredMoveDirection;
         } else {
             if (!_grounded) {
                 _rigidBody.useGravity = true;
@@ -51,14 +47,12 @@ public class PalomoController : MonoBehaviour {
     void FixedUpdate()
     {
         if (_flying) {
-            _rigidBody.AddRelativeForce(_controlForce, ForceMode.Force);
-
-            transform.forward = _rigidBody.velocity;
+            
         }
     }
 
     void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.name.Contains("terrain")) {
+        if (collision.gameObject.tag.Contains("Ground")) {
             _grounded = true;
         }
 
