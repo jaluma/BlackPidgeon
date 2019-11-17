@@ -59,7 +59,7 @@ public class PalomoController : MonoBehaviour {
                 _rigidBody.mass = 2;
 
                 // controller andando
-                if (_mainCamera.transform.forward.y <= StopAngleVector.y) {
+                if (_mainCamera.transform.forward.y <= StopAngle) {
                     DisableWalk();
                 }
 
