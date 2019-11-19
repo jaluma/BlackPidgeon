@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class StartMenuInteraction : MonoBehaviour {
 
     public float totalTime = 3;
-    public string scene = "DemoScene";
+    public string scene = "Demo Scene";
     public float gvrTimer;
     private bool gvrStatus;
     public UnityEvent GVRClick;
