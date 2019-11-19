@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 61dfd1ca25d8ec043ba20422b80958d6
+guid: 41645ba4375980148b3bb7d059bc4287
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -75,8 +75,8 @@ ModelImporter:
     100138: mixamorig:Spine
     100140: mixamorig:Spine1
     100142: mixamorig:Spine2
-    100144: //RootNode
-    100146: Shoes
+    100144: Shoes
+    100146: //RootNode
     100148: Tops
     400000: Body
     400002: Bottoms
@@ -150,8 +150,8 @@ ModelImporter:
     400138: mixamorig:Spine
     400140: mixamorig:Spine1
     400142: mixamorig:Spine2
-    400144: //RootNode
-    400146: Shoes
+    400144: Shoes
+    400146: //RootNode
     400148: Tops
     2100000: Bodymat
     2100002: Hairmat
@@ -179,127 +179,127 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Body_Diffuse
-    second: {fileID: 2800000, guid: b5048521ea12a334382d216efadfc261, type: 3}
+    second: {fileID: 2800000, guid: 845da7a67ebe778479feb3213abb6c1b, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Body_Gloss
-    second: {fileID: 2800000, guid: 7d287e4e248e6074390bbb98216a74ff, type: 3}
+    second: {fileID: 2800000, guid: 507ba33ed24075e45bb677bcb8ab27ed, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Body_Normal
-    second: {fileID: 2800000, guid: ee9a4f1d50a0b2045b2de930789ae118, type: 3}
+    second: {fileID: 2800000, guid: 4a66bd5baa639df4881a72a1c901bd08, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Body_Opacity
-    second: {fileID: 2800000, guid: e4eac090cbb5040499f0bba3c77885c5, type: 3}
+    second: {fileID: 2800000, guid: cfb317273ef17aa4588acf34bec92925, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Body_Specular
-    second: {fileID: 2800000, guid: 632fb7b9d8e219140a35c68ee70cb498, type: 3}
+    second: {fileID: 2800000, guid: 5da35260e090ffa40ba53edc87e60f7c, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Bottom_Diffuse
-    second: {fileID: 2800000, guid: db782f625a17a1c4dacb3279db294a88, type: 3}
+    second: {fileID: 2800000, guid: a78946929612fa54695e6f0d28652d67, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Bottom_Gloss
-    second: {fileID: 2800000, guid: 214cbf4820ed3fa43aa3866d3a515042, type: 3}
+    second: {fileID: 2800000, guid: ec233795e79df2b49a52ae427bfb2db5, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Bottom_Normal
-    second: {fileID: 2800000, guid: 04bcdf6be6f1be948ac4d5d2f0f1c126, type: 3}
+    second: {fileID: 2800000, guid: 94acb0d4d84971342bc8dcacc12732e5, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Bottom_Opacity
-    second: {fileID: 2800000, guid: b6a986cdceb844243bf9f2651d0525f4, type: 3}
+    second: {fileID: 2800000, guid: 25bfdc19f128a17419b17d7bd69d69a4, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Bottom_Specular
-    second: {fileID: 2800000, guid: e020e87ab1b49a44fa3fc072ead266da, type: 3}
+    second: {fileID: 2800000, guid: 2a597ee6509dc2d409c7e513d594e876, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Hair_Diffuse
-    second: {fileID: 2800000, guid: 8ea3932f6ab54b443af12d2c30ad4511, type: 3}
+    second: {fileID: 2800000, guid: 346ee4d259347854089b7c5264b2c34c, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Hair_Gloss
-    second: {fileID: 2800000, guid: d4781d19c91c623428983f3b02632507, type: 3}
+    second: {fileID: 2800000, guid: f779932b5733daf43a4c887526bb38d4, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Hair_Normal
-    second: {fileID: 2800000, guid: fdf424d40af50ce46b1c56bab5e0ded9, type: 3}
+    second: {fileID: 2800000, guid: 36855280ed04ce94f820720ba853cbf5, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Hair_Opacity
-    second: {fileID: 2800000, guid: 5a4220b4cbf07444f82053f13264c764, type: 3}
+    second: {fileID: 2800000, guid: e235767346fc9584d8d1b7aa03e00e41, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Hair_Specular
-    second: {fileID: 2800000, guid: ae6ed515b86e77345860ac8abcc0b5d6, type: 3}
+    second: {fileID: 2800000, guid: 05feacb88ba931c4aa52b955ba914b1b, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Shoes_Diffuse
-    second: {fileID: 2800000, guid: 28532aa26202caf468e67e5ff270ae8a, type: 3}
+    second: {fileID: 2800000, guid: 32dfe31ecc852fe49881fc17e2ccf69c, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Shoes_Gloss
-    second: {fileID: 2800000, guid: dbdb4b220e0f3cc429506fe9283c4719, type: 3}
+    second: {fileID: 2800000, guid: be668633b5dc87a4f80cba37e387b2e6, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Shoes_Normal
-    second: {fileID: 2800000, guid: 99b9ccee44f05484cb36f7716ad36f71, type: 3}
+    second: {fileID: 2800000, guid: 7c75be9761e1b8e4fa1c3745cf836d8d, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Shoes_Opacity
-    second: {fileID: 2800000, guid: 9e65eff7374e7af4daf1acb85b46404f, type: 3}
+    second: {fileID: 2800000, guid: 9fad036188106a743ac5b0d2ed6ef633, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Shoes_Specular
-    second: {fileID: 2800000, guid: d67944275fe398648bae84f763d9c0e1, type: 3}
+    second: {fileID: 2800000, guid: 09e41b35001542a4691c7d4afea9fab8, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Top_Diffuse
-    second: {fileID: 2800000, guid: 3ace14c1ce0fdda4380ab55ee6c3feb0, type: 3}
+    second: {fileID: 2800000, guid: eddb713cb37b4594499c48de0b0b9fcf, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Top_Gloss
-    second: {fileID: 2800000, guid: 53ef846594cfb304ebbb250a9e08a90f, type: 3}
+    second: {fileID: 2800000, guid: a5ac7ffad473a254fafcf0a2a2ce6fa5, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Top_Normal
-    second: {fileID: 2800000, guid: feae71b55a8e01c47b65c9aa7a93bd8e, type: 3}
+    second: {fileID: 2800000, guid: 191fd57eb1311164c8e375ab516ac194, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Top_Opacity
-    second: {fileID: 2800000, guid: 8c58b9586551da847ae2e3e4ccac85ef, type: 3}
+    second: {fileID: 2800000, guid: 8e5b4abfa671f564d859d23620c6cc7f, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Stefani_Top_Specular
-    second: {fileID: 2800000, guid: 769a5df541b7aa74194eeb7be78ded19, type: 3}
+    second: {fileID: 2800000, guid: 50b81c6361a82c04ca305d0db6aed83c, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
@@ -331,7 +331,7 @@ ModelImporter:
       name: mixamo.com
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 140
+      lastFrame: 35
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
