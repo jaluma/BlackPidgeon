@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9530f7f2541ca64c8c183886312ca38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 447526359333392157, guid: 7be916aabcf92294592b05989ebb9458,
+  bulletPrefab: {fileID: 447526359333392152, guid: 7be916aabcf92294592b05989ebb9458,
     type: 3}
   shootSpeed: 300
   enemy: {fileID: 482111192}
