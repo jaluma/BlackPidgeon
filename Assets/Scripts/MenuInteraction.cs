@@ -2,20 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuInteraction : MonoBehaviour
+public class MenuInteraction : MonoBehaviour, Interactuable
 {
+    
 
-
-    void Start()
+    public void Execute()
     {
-        
+        Debug.Log("hacer algo");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-        
-        
-    }
 }

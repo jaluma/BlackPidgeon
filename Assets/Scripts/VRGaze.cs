@@ -30,7 +30,7 @@ public class VRGaze : MonoBehaviour
             {
 
                 //if(_hit.transform.gameObject.GetComponent<Interactuable>()!=null)
-                _hit.transform.gameObject.GetComponent<Interactuable>().Execute();
+                this.GetComponent<Interactuable>().Execute();
                 //print(_hit.transform.gameObject);
                 GVROff();
             }

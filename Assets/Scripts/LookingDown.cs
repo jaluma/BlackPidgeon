@@ -6,10 +6,13 @@ public class LookingDown : MonoBehaviour
 {
     private bool menuOut;
     GameObject[] menuElemets;
-    public int timeOutofMenu = 0;
+    public int TimeOutofMenu = 0;
+    public int TimeLimit = 300;
+    public float ToleranciaMirarSuelo = 0.766f;
+    public float Ralentizacion = 0.3f;
     GameObject c;
-    public float distance;
-    public float altura;
+    public float Distance = 0.7f;
+    public float Altura = 1.1F;
     public float YRotationCamera;
     public float YRotationCanvas;
 
@@ -25,9 +28,9 @@ public class LookingDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(timeOutofMenu);
+       // Debug.Log(TimeOutofMenu);
        //Debug.Log("x:" + gameObject.transform.eulerAngles.x);
-        Debug.Log("y:" + gameObject.transform.eulerAngles.y);
+       // Debug.Log("y:" + gameObject.transform.eulerAngles.y);
         //Debug.Log("z:" + gameObject.transform.eulerAngles.z);
         // Debug.Log(gameObject.transform.rotation.ToString());
         
@@ -46,17 +49,17 @@ public class LookingDown : MonoBehaviour
         {
             if (Vector3.Dot(gameObject.transform.forward, Vector3.down) > 0.166f)
             {
-                timeOutofMenu = 0;
+                TimeOutofMenu = 0;
             }
-            if(timeOutofMenu >= 300)
+            if(TimeOutofMenu >= TimeLimit)
             {
                 HideMenu();
                 Debug.Log("han pasado 5 segs");
-                timeOutofMenu = 0;
+                TimeOutofMenu = 0;
             }
             else
             {
-                timeOutofMenu++;
+                TimeOutofMenu++;
                 
             }
             
@@ -67,21 +70,21 @@ public class LookingDown : MonoBehaviour
     {
         //var rotationY = transform.rotation.y;
 
-       /* if (Mathf.Abs(transform.forward.x) > 0 || Mathf.Abs(transform.forward.z) > 0)
-        {
-           if(transform.forward.x > 0 || transform.forward.z > 0)
-            {
-                rotationY += 90;
-            }
-            else
-            {
-                rotationY -= 90;
-            }
-        }*/
-        var a = new Vector3(transform.forward.x, transform.forward.y + altura, transform.forward.z);
-        c.transform.position = transform.position + a * distance;
+        /* if (Mathf.Abs(transform.forward.x) > 0 || Mathf.Abs(transform.forward.z) > 0)
+         {
+            if(transform.forward.x > 0 || transform.forward.z > 0)
+             {
+                 rotationY += 90;
+             }
+             else
+             {
+                 rotationY -= 90;
+             }
+         }*/
+         var a = new Vector3(transform.forward.x, transform.forward.y + Altura, transform.forward.z);
+         c.transform.position = transform.position + a * Distance;
 
-        YRotationCamera = transform.rotation.y;
+         YRotationCamera = transform.rotation.y;
 
 
 
@@ -89,12 +92,17 @@ public class LookingDown : MonoBehaviour
          {
              angleY += 180;
          }*/
-        c.transform.Rotate(new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z));
+        c.transform.Rotate(new Vector3(transform.rotation.x, transform.eulerAngles.y, transform.rotation.z));
         YRotationCanvas = c.transform.rotation.y;
+
+        /*Vector3 playerPosition = new Vector3(transform.position.x,c.transform.position.y,transform.position.z);
+        c.transform.LookAt(playerPosition);*/
+        
+
         foreach (GameObject o in menuElemets)
         {
             menuOut = true;
-            Time.timeScale = 0.3f;
+            Time.timeScale = Ralentizacion;
             o.SetActive(true);
 
         }

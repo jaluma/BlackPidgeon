@@ -8,16 +8,22 @@ public class CameraWalk : MonoBehaviour {
     public int speed = 2;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 
   //      player = GameObject.FindGameObjectWithTag("Player").GetComponent<Camera>();		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
 
         if (Camera.main != null)
+        { 
             transform.position = transform.position + Camera.main.transform.forward * speed * Time.deltaTime;
+            Vector3 cameraRotation = new Vector3(transform.rotation.x, Camera.main.transform.rotation.y, transform.rotation.z);
+
+        }
         else
             Debug.Log("Couldnt find tag MainCamera");
 	}
