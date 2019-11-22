@@ -23,13 +23,13 @@ public class AtaqueAerio : MonoBehaviour
     {
         _proyectil_Original = GameObject.FindGameObjectWithTag("poop");
 
-        if (!_proyectil_Original.activeSelf)
+        /*if (!_proyectil_Original.activeSelf)
         {
             _proyectil_Original.SetActive(true);
-        }
+        }*/
         
         _proyectilNuevo = Instantiate(_proyectil_Original);
-        _proyectil_Original.SetActive(false);
+        //_proyectil_Original.SetActive(false);
         _proyectilNuevo.transform.position = transform.position - new Vector3(0, 1, 0);
         _rb = _proyectilNuevo.GetComponent<Rigidbody>();
         _rb.velocity = new Vector3(0, -VelocidadProyectil, 0);

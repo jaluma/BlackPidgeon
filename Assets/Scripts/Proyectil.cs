@@ -26,7 +26,7 @@ public class Proyectil : MonoBehaviour
     {
         Debug.Log(collider.gameObject.name);
         Detonate();
-        Invoke("DelayedDestroy", 2);
+        Invoke("DelayedDestroy", 0.5F);
     }
     void DelayedDestroy()
     {
