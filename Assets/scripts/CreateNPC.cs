@@ -5,34 +5,32 @@ using System.Collections;
 public class CreateNPC : MonoBehaviour
 {
 
-    public NavMeshAgent agent;
-    public NavMeshAgent agent1;
-    public NavMeshAgent agent2;
-    public NavMeshAgent agent3;
-    public NavMeshAgent agent4;
-    public NavMeshAgent agent5;
-    public NavMeshAgent agent6;
-
+    public GameObject agent;
     private int npcCount;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(GenerateNPC());
+        Application.targetFrameRate = 60;
     }
 
     // Update is called once per frame
     IEnumerator GenerateNPC()
     {
-        while (npcCount < 10)
+        while (npcCount < 30)
         {
-            Instantiate(agent, RandomNavmeshLocation(50), Quaternion.identity);
-            Instantiate(agent1, RandomNavmeshLocation(50), Quaternion.identity);
-            Instantiate(agent2, RandomNavmeshLocation(50), Quaternion.identity);
-            Instantiate(agent3, RandomNavmeshLocation(50), Quaternion.identity);
-            Instantiate(agent4, RandomNavmeshLocation(50), Quaternion.identity);
-            Instantiate(agent5, RandomNavmeshLocation(50), Quaternion.identity);
-            Instantiate(agent6, RandomNavmeshLocation(50), Quaternion.identity);
+            agent = ObjectPooler.SharedInstance.GetPooledObject();           
+            for (int i = 0; i < 7; i++)
+            {
+                if (agent != null)
+                {
+                    agent.transform.position = RandomNavmeshLocation(50);
+                    agent.transform.rotation = Quaternion.identity;
+                    agent.SetActive(true);
+                }
+            }          
             yield return new WaitForSeconds(0.1f);
             npcCount++;
         }
