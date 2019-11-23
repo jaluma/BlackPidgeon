@@ -15,6 +15,7 @@ public class PalomoController : MonoBehaviour {
     private Rigidbody _rigidBody;
     private Camera _mainCamera;
 
+    public bool Flying { get => _flying; }
     private bool _flying;
     private bool _grounded;
 
@@ -32,7 +33,7 @@ public class PalomoController : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (_flying) {
-            transform.position = transform.position + _mainCamera.transform.forward * MaxSpeed * MaxSpeedMultiplierWalking * Time.deltaTime;
+            transform.position = transform.position + _mainCamera.transform.forward * MaxSpeed * MaxSpeedMultiplierFlying * Time.deltaTime;
         } else {
 
             if (!_grounded) {
@@ -52,8 +53,6 @@ public class PalomoController : MonoBehaviour {
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.tag.Contains("Ground")) {
             _grounded = true;
-        } else {
-            DisableFly();
         }
     }
 
@@ -77,6 +76,25 @@ public class PalomoController : MonoBehaviour {
 
     public void DisableWalk() {
         _moveForwardGround = false;
+    }
+
+    public void Fly() {
+        if (_flying) {
+            DisableFly();
+            _mainCamera.GetComponent<LookingDown>().DisableFly();
+        } else {
+            EnableFly();
+            _mainCamera.GetComponent<LookingDown>().EnableFly();
+        }
+    }
+
+    public void Walk() {
+        _mainCamera.GetComponent<LookingDown>().DisableFly();
+        if (_moveForwardGround) {
+            DisableWalk();
+        } else {
+            EnableWalk();
+        }
     }
 
 }
