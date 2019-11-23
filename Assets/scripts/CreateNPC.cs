@@ -18,14 +18,14 @@ public class CreateNPC : MonoBehaviour
 
     IEnumerator GenerateNPC()
     {
-        while (ObjectPooler.SharedInstance.pooledObjects.Count < 29)
+        while (npcCount < 200)
         {
             agent = ObjectPooler.SharedInstance.GetPooledObject();
 
             if (agent != null)
             {
                 agent.transform.rotation = Quaternion.identity;
-                agent.transform.position = RandomNavmeshLocation(50);
+                agent.transform.position = RandomNavmeshLocation(200);
                 agent.SetActive(true);
             }
 
