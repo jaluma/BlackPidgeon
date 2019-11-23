@@ -6,8 +6,8 @@ public class CreateNPC : MonoBehaviour
 {
 
     public GameObject agent;
-    private int npcCount;
-    
+    private int npcCount = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -16,20 +16,19 @@ public class CreateNPC : MonoBehaviour
         Application.targetFrameRate = 60;
     }
 
-    // Update is called once per frame
     IEnumerator GenerateNPC()
     {
-        while (npcCount < 30)
+        while (ObjectPooler.SharedInstance.pooledObjects.Count < 29)
         {
-            agent = ObjectPooler.SharedInstance.GetPooledObject();           
-            
-                if (agent != null)
-                {
-                    agent.transform.rotation = Quaternion.identity;
-                    agent.transform.position = RandomNavmeshLocation(50);
-                    agent.SetActive(true);
-                }
-                     
+            agent = ObjectPooler.SharedInstance.GetPooledObject();
+
+            if (agent != null)
+            {
+                agent.transform.rotation = Quaternion.identity;
+                agent.transform.position = RandomNavmeshLocation(50);
+                agent.SetActive(true);
+            }
+
             yield return new WaitForSeconds(0.1f);
             npcCount++;
         }
@@ -44,9 +43,7 @@ public class CreateNPC : MonoBehaviour
         if (NavMesh.SamplePosition(randomDirection, out hit, radius, 1))
         {
             finalPosition = hit.position;
-            
         }
-        finalPosition.y = 0;
         return finalPosition;
     }
 }
