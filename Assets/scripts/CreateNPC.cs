@@ -22,15 +22,14 @@ public class CreateNPC : MonoBehaviour
         while (npcCount < 30)
         {
             agent = ObjectPooler.SharedInstance.GetPooledObject();           
-            for (int i = 0; i < 7; i++)
-            {
+            
                 if (agent != null)
                 {
-                    agent.transform.position = RandomNavmeshLocation(50);
                     agent.transform.rotation = Quaternion.identity;
+                    agent.transform.position = RandomNavmeshLocation(50);
                     agent.SetActive(true);
                 }
-            }          
+                     
             yield return new WaitForSeconds(0.1f);
             npcCount++;
         }
@@ -45,7 +44,9 @@ public class CreateNPC : MonoBehaviour
         if (NavMesh.SamplePosition(randomDirection, out hit, radius, 1))
         {
             finalPosition = hit.position;
+            
         }
+        finalPosition.y = 0;
         return finalPosition;
     }
 }
