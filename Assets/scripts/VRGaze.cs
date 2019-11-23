@@ -15,6 +15,7 @@ public class VRGaze : MonoBehaviour
     void Start()
     {
         
+
     }
 
     // Update is called once per frame
@@ -27,13 +28,14 @@ public class VRGaze : MonoBehaviour
             Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
             if (elapsed >= totalTime && Physics.Raycast(ray, out _hit, distanceOfRay))
             {
-                
+
                 //if(_hit.transform.gameObject.GetComponent<Interactuable>()!=null)
-                    _hit.transform.gameObject.GetComponent<Interactuable>().Execute();
+                this.GetComponent<Interactuable>().Execute();
                 //print(_hit.transform.gameObject);
                 GVROff();
             }
         }
+
     }
 
     public void GVROn()
