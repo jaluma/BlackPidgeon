@@ -9,7 +9,6 @@ public class LookingDown : MonoBehaviour {
     public int TimeLimit = 300;
     public float ToleranciaMirarSuelo = 0.766f;
     public float Ralentizacion = 0.3f;
-    GameObject c;
     GameObject copyCanvas;
     public float Distance = 0.7f;
     public float Altura = 1.1F;
@@ -27,7 +26,6 @@ public class LookingDown : MonoBehaviour {
     void Start() {
         menuElemets = GameObject.FindGameObjectsWithTag("MenuElements");
         copyCanvas = GameObject.FindGameObjectWithTag("Canvas");
-        c = copyCanvas;
 
         player = GameObject.FindGameObjectWithTag("Player");
 
@@ -44,7 +42,6 @@ public class LookingDown : MonoBehaviour {
         // Debug.Log("y:" + gameObject.transform.eulerAngles.y);
         //Debug.Log("z:" + gameObject.transform.eulerAngles.z);
         // Debug.Log(gameObject.transform.rotation.ToString());
-
 
         if (Vector3.Dot(gameObject.transform.forward, Vector3.down) > ToleranciaMirarSuelo) {
             if (!menuOut) {
@@ -71,53 +68,49 @@ public class LookingDown : MonoBehaviour {
 
                 }
             } else {
-                ShowMenu();
+                if (!menuOut) {
+                    ShowMenu();
+                }
             }
 
         }
     }
 
     private void ShowMenu() {
-
-        c = copyCanvas;
-        var a = new Vector3(transform.forward.x, transform.forward.y + Altura, transform.forward.z);
-        c.transform.position = transform.position + a * Distance;
-
-
-        //c.transform.Rotate(new Vector3(transform.rotation.x, transform.eulerAngles.y, transform.rotation.z));
-
-        // lo sigueinte arregla la rotacion andando...
-        var rotation = Quaternion.LookRotation(transform.position);
-        rotation *= Quaternion.Euler(0, transform.rotation.y * 360, 0);
-        c.transform.rotation = Quaternion.Slerp(c.transform.rotation, rotation, Time.deltaTime);
-
-        YRotationCamera = transform.rotation.y;
-        YRotationCanvas = c.transform.rotation.y;
-
-        /* Vector3 playerPosition = new Vector3(transform.position.x,c.transform.position.y,transform.position.z);
-         c.transform.LookAt(playerPosition);*/
+        //if (!Flying) {
+        //var position = new Vector3(transform.position.x, transform.position.y * Distance, transform.position.z);
+        //copyCanvas.transform.position = position;
+        //var rotation = Quaternion.LookRotation(transform.position);
+        //rotation *= Quaternion.Euler(0, transform.rotation.y, 0);
+        //copyCanvas.transform.rotation = Quaternion.Slerp(copyCanvas.transform.rotation, rotation, Time.deltaTime);
+        //var c = copyCanvas;
+        copyCanvas.GetComponent<BlockRotation>().Block = true;
+        var a = new Vector3(copyCanvas.transform.position.x, copyCanvas.transform.position.y + Altura, copyCanvas.transform.position.z);
+        copyCanvas.transform.position = a;
+        //c.transform.LookAt(c.transform.position + transform.rotation * Vector3.back, transform.rotation * Vector3.up);
 
         if (!Flying) {
             foreach (GameObject o in menuElemets) {
-                menuOut = true;
                 Time.timeScale = Ralentizacion;
                 o.SetActive(true);
-
             }
         }
+        menuOut = true;
+        //}
 
     }
 
     public void HideMenu() {
         foreach (GameObject o in menuElemets) {
-            menuOut = false;
             Time.timeScale = 1.0f;
             o.SetActive(false);
         }
+        menuOut = false;
+        copyCanvas.GetComponent<BlockRotation>().Block = false;
         UpdateLastShowed();
     }
 
-    void UpdateLastShowed() {
+    public void UpdateLastShowed() {
         lastShow = DateTime.Now;
     }
 
