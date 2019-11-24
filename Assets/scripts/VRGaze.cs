@@ -22,8 +22,6 @@ public class VRGaze : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        print(gvrTimer);
         if (gvrStatus)
         {
             gvrTimer += Time.deltaTime;

@@ -39,4 +39,9 @@ public class ImagePigeons : MonoBehaviour {
         }
         _count++;
     }
+
+    public int GetCount()
+    {
+        return _count;
+    }
 }
