@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class VRGaze : MonoBehaviour
@@ -21,17 +22,22 @@ public class VRGaze : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        print(gvrTimer);
         if (gvrStatus)
         {
             gvrTimer += Time.deltaTime;
             float elapsed = gvrTimer / totalTime;
-            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-            if (elapsed >= totalTime && Physics.Raycast(ray, out _hit, distanceOfRay))
-            {
+            //Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+            PointerEventData pointerData = new PointerEventData(EventSystem.current);
+            pointerData.position = Camera.main.gameObject.transform.position;
+            List<RaycastResult> results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(pointerData, results);
 
-                //if(_hit.transform.gameObject.GetComponent<Interactuable>()!=null)
-                this.GetComponent<Interactuable>().Execute();
-                //print(_hit.transform.gameObject);
+            //Physics.Raycast(ray, out _hit, distanceOfRay)
+            if (elapsed >= totalTime && results.Count>0)
+            {
+                results[0].gameObject.GetComponent<Interactuable>().Execute();
                 GVROff();
             }
         }
