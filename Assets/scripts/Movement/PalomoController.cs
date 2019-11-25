@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PalomoController : MonoBehaviour {
     public float TurnForceMultiplier = 1;
@@ -22,6 +23,8 @@ public class PalomoController : MonoBehaviour {
     private float _elapsedTimeFly = 0.0f;
 
     private Vector3 StopAngleVector;
+
+    private int vidas = 3;
 
     void Start() {
         _rigidBody = GetComponent<Rigidbody>();
@@ -89,6 +92,15 @@ public class PalomoController : MonoBehaviour {
             _grounded = true;
             DisableFly();
         }
+
+        if (collision.gameObject.tag.Contains("bullet"))
+        {
+            vidas--;
+            if (vidas == 0)
+                SceneManager.LoadScene("StartMenu");
+        }
+            
+
 
         DisableFly();
     }

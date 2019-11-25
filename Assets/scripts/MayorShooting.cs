@@ -7,6 +7,8 @@ public class MayorShooting : MonoBehaviour
     public /*GameObject*/Rigidbody bulletPrefab;
     public float shootSpeed = 300;
     public GameObject enemy;
+    public float fireRate = 3;
+    private float nextFire = 2;
 
     Transform cameraTransform;
     
@@ -17,29 +19,19 @@ public class MayorShooting : MonoBehaviour
 
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Time.time > nextFire)
         {
-            shootBullet();
+            nextFire = Time.time + fireRate;
+            ShootBullet(); 
         }
-    }
-    void shootBullet()
-    {/*
-        GameObject tempObj;
-        //Instantiate/Create Bullet
         
-        tempObj = Instantiate(bulletPrefab) as GameObject;
-
-        //Set position  of the bullet in front of the player
-        tempObj.transform.position = transform.position;
-
-        //Get the Rigidbody that is attached to that instantiated bullet
-        Rigidbody projectile = GetComponent<Rigidbody>();
-
-        //Shoot the Bullet 
-        projectile.velocity = cameraTransform.forward * shootSpeed;*/
-
-        Rigidbody bullet = Instantiate(bulletPrefab, transform.position, transform.rotation) as Rigidbody;
-        bullet.velocity = cameraTransform.TransformDirection(Vector3.forward * shootSpeed);
     }
+    void ShootBullet()
+    {
+        transform.LookAt(enemy.transform.position);
+        Rigidbody bullet = Instantiate(bulletPrefab, transform.position, transform.rotation) as Rigidbody;
+        //bullet.velocity = cameraTransform.TransformDirection(Vector3.forward * shootSpeed);
+        Destroy(bullet.gameObject, 10f);
+    }
+
 }
