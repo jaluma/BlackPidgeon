@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class IntroButtonInteraction : MonoBehaviour
 {
 
-    public float totalTime = 3;
+    public float totalTime = 5;
     public string scene = "StartMenu";
     public float gvrTimer;
     private bool gvrStatus;
