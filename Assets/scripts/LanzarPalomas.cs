@@ -42,6 +42,8 @@ public class LanzarPalomas : MonoBehaviour
         }
     }
 
+    
+
     private void Update()
     {
         if (atacar)
@@ -81,5 +83,10 @@ public class LanzarPalomas : MonoBehaviour
     {
         atacar = true;
         
+    }
+
+    public int getCountPalomasReclutadas()
+    {
+        return imagePigeon.GetCount();
     }
 }

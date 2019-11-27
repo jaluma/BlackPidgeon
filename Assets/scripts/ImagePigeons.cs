@@ -23,6 +23,7 @@ public class ImagePigeons : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        actualizarPalomas();
     }
 
     public void AddPigeon() {
@@ -43,5 +44,15 @@ public class ImagePigeons : MonoBehaviour {
     public int GetCount()
     {
         return _count;
+    }
+
+    private void actualizarPalomas()
+    {
+        if (InfoPalomo.OtraEscena)
+        {
+            for (int i = 0; i < InfoPalomo.GetNumPalomas; i++)
+                AddPigeon();
+            InfoPalomo.OtraEscena = false;
+        }
     }
 }
