@@ -8,6 +8,7 @@ TagManager:
   - NPC
   - palomo
   - bullet
+  - BulletCollection
   layers:
   - Default
   - TransparentFX

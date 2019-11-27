@@ -4,33 +4,25 @@ using UnityEngine;
 
 public class MayorShooting : MonoBehaviour
 {
-    public /*GameObject*/Rigidbody bulletPrefab;
-    public float shootSpeed = 300;
-    public GameObject enemy;
-    public float fireRate = 3;
-    private float nextFire = 2;
-
-    Transform cameraTransform;
-    
-    void Start()
-    {
-        cameraTransform = Camera.main.transform;
-    }
+    public Rigidbody BulletPrefab;
+    public GameObject EnemyToShoot;
+    private float _fireRate = 3;
+    private float _nextFire = 2;
 
     void Update()
     {
-        if (Time.time > nextFire)
+        transform.LookAt(EnemyToShoot.transform);
+        if (Time.time > _nextFire)
         {
-            nextFire = Time.time + fireRate;
+            _nextFire = Time.time + _fireRate;
             ShootBullet(); 
         }
         
     }
     void ShootBullet()
     {
-        transform.LookAt(enemy.transform.position);
-        Rigidbody bullet = Instantiate(bulletPrefab, transform.position, transform.rotation) as Rigidbody;
-        //bullet.velocity = cameraTransform.TransformDirection(Vector3.forward * shootSpeed);
+        Rigidbody bullet = Instantiate(BulletPrefab, transform.position, new Quaternion()) as Rigidbody;
+        bullet.transform.parent = GameObject.FindGameObjectWithTag("BulletCollection").transform;
         Destroy(bullet.gameObject, 10f);
     }
 
