@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MayorShooting : MonoBehaviour
 {
@@ -24,6 +25,14 @@ public class MayorShooting : MonoBehaviour
         Rigidbody bullet = Instantiate(BulletPrefab, transform.position, new Quaternion()) as Rigidbody;
         bullet.transform.parent = GameObject.FindGameObjectWithTag("BulletCollection").transform;
         Destroy(bullet.gameObject, 10f);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag.Contains("poop"))
+        {
+            SceneManager.LoadScene("Credits");
+        }
     }
 
 }

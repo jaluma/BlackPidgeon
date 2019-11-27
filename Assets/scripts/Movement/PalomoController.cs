@@ -24,7 +24,6 @@ public class PalomoController : MonoBehaviour {
 
     private Vector3 StopAngleVector;
 
-    private int vidas = 3;
 
     void Start() {
         _rigidBody = GetComponent<Rigidbody>();
@@ -95,9 +94,7 @@ public class PalomoController : MonoBehaviour {
 
         if (collision.gameObject.tag.Contains("bullet"))
         {
-            vidas--;
-            if (vidas == 0)
-                SceneManager.LoadScene("StartMenu");
+            SceneManager.LoadScene("StartMenu");
         }
             
 

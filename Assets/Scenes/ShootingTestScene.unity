@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 161234741}
   m_Layer: 0
   m_Name: Palomo
-  m_TagString: Untagged
+  m_TagString: palomo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -779,8 +779,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9530f7f2541ca64c8c183886312ca38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletPrefab: {fileID: 0}
-  EnemyToShoot: {fileID: 0}
+  BulletPrefab: {fileID: 447526359333392152, guid: 7be916aabcf92294592b05989ebb9458,
+    type: 3}
+  EnemyToShoot: {fileID: 161234740}
 --- !u!1 &1794467332
 GameObject:
   m_ObjectHideFlags: 0
