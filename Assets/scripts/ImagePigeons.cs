@@ -7,6 +7,7 @@ public class ImagePigeons : MonoBehaviour {
     private int _count;
     private GameObject _imageDefault;
     private int _countPigeons;
+    public LanzarPalomas lanzar;
 
     // Start is called before the first frame update
     void Start() {
@@ -39,6 +40,7 @@ public class ImagePigeons : MonoBehaviour {
             }
         }
         _count++;
+        lanzar.increasePalomasReclutadas();
     }
 
     public int GetCount()
