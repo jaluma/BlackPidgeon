@@ -12,8 +12,11 @@ public class PalomoController : MonoBehaviour {
     public float DelayTimeFly = 2f;
     public float DropSpeed = 20.0f;
 
+    public Vector3 DistanceFlying;
+
     private Rigidbody _rigidBody;
     private Camera _mainCamera;
+    private GameObject _player;
 
     public bool Flying { get => _flying; }
     private bool _flying;
@@ -24,6 +27,7 @@ public class PalomoController : MonoBehaviour {
     void Start() {
         _rigidBody = GetComponent<Rigidbody>();
         _mainCamera = Camera.main;
+        _player = GameObject.FindGameObjectWithTag("Player");
 
         //DisableFly();
         //EnableWalk();
@@ -34,6 +38,7 @@ public class PalomoController : MonoBehaviour {
     void Update() {
         if (_flying) {
             transform.position = transform.position + _mainCamera.transform.forward * MaxSpeed * MaxSpeedMultiplierFlying * Time.deltaTime;
+            transform.forward = _mainCamera.transform.forward;
         } else {
 
             if (!_grounded) {
@@ -61,11 +66,15 @@ public class PalomoController : MonoBehaviour {
         _flying = true;
         _grounded = false;
         _rigidBody.useGravity = false;
+
+        _player.GetComponent<CameraController>().ChangePositionCamera(DistanceFlying);
     }
 
     public void DisableFly() {
         _flying = false;
         _rigidBody.useGravity = true;
+
+        _player.GetComponent<CameraController>().ResetPositionCamera();
     }
 
     public void EnableWalk() {
