@@ -39,6 +39,7 @@ public class PalomoController : MonoBehaviour {
         if (_flying) {
             transform.position = transform.position + _mainCamera.transform.forward * MaxSpeed * MaxSpeedMultiplierFlying * Time.deltaTime;
             transform.forward = _mainCamera.transform.forward;
+            transform.Rotate(Vector3.up, 90);
         } else {
 
             if (!_grounded) {
