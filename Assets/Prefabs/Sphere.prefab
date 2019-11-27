@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 447526359333392159}
   - component: {fileID: 447526359333392156}
   - component: {fileID: 447526359333392152}
-  - component: {fileID: 114084758347835886}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: bullet
@@ -60,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 46e3c8d0e49854f398883a454efa059e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,15 +108,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114084758347835886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447526359333392157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ded4c7e5bb491014f9919cbe3bb0f73a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
