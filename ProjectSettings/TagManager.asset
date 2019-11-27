@@ -14,6 +14,7 @@ TagManager:
   - CanvasOverlay
   - Pigeon
   - PigeonBullet
+  - Palomo
   layers:
   - Default
   - TransparentFX
