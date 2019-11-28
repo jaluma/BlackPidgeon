@@ -10,23 +10,38 @@ public class ChangeScene : MonoBehaviour
     public string sceneName = "TownHallScene";
     public LanzarPalomas palomas;
     public Text texto;
+    public int numMinPalomas = 3;
 
     private void OnTriggerEnter(Collider other)
     {
 
         if (other.CompareTag("Palomo"))
         {
-            if (palomas.getCountPalomasReclutadas() >= 1) {
+            if (palomas.getCountPalomasReclutadas() >= numMinPalomas)
+            {
                 InfoPalomo.GetNumPalomas = palomas.getCountPalomasReclutadas();
                 InfoPalomo.OtraEscena = true;
                 SceneManager.LoadScene("TownHallScene");
             }
-        else
-            texto.text = "NECESITAS 3 PALOMAS";
+            else
+            {
+                texto.text = "NECESITAS"+numMinPalomas+" PALOMAS";
+            }
 
         }
     }
 
-    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Palomo"))
+        {
+            
+                texto.text = "";
+            
+
+        }
+    }
+
+
 
 }
