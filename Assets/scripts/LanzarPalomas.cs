@@ -42,6 +42,8 @@ public class LanzarPalomas : MonoBehaviour
         }
     }
 
+    
+
     private void Update()
     {
         if (atacar)
@@ -58,7 +60,7 @@ public class LanzarPalomas : MonoBehaviour
             if (time > delay) {
                 stopMusic();
                 delayEntrePaloma += Time.deltaTime;
-                while(palomasLanzadas< imagePigeon.GetCount()&& delayEntrePaloma > delayDisparo) { 
+                while(palomasLanzadas< EstadoJuego.numPalomas && delayEntrePaloma > delayDisparo) { 
                     GameObject prefab = Resources.Load("PalomaProyectil") as GameObject;
                     GameObject paloma = Instantiate(prefab) as GameObject;
                     paloma.transform.position = transform.position + Camera.main.transform.forward * 2;
@@ -67,7 +69,7 @@ public class LanzarPalomas : MonoBehaviour
                     delayEntrePaloma = 0;
                     palomasLanzadas++;
                 }
-                if(palomasLanzadas>= imagePigeon.GetCount()) {
+                if(palomasLanzadas>= EstadoJuego.numPalomas) {
                     atacar = false;
                     time = 0;
                     text.text = "";
@@ -81,5 +83,15 @@ public class LanzarPalomas : MonoBehaviour
     {
         atacar = true;
         
+    }
+
+    public int getCountPalomasReclutadas()
+    {
+        return EstadoJuego.numPalomas;
+    }
+
+    public void increasePalomasReclutadas()
+    {
+        EstadoJuego.numPalomas++ ;
     }
 }

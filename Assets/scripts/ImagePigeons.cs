@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ImagePigeons : MonoBehaviour {
-    private GameObject _canvas;
     private int _count;
     private GameObject _imageDefault;
     private int _countPigeons;
+    public LanzarPalomas lanzar;
 
     // Start is called before the first frame update
     void Start() {
@@ -23,6 +23,7 @@ public class ImagePigeons : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        actualizarPalomas();
     }
 
     public void AddPigeon() {
@@ -38,10 +39,21 @@ public class ImagePigeons : MonoBehaviour {
             }
         }
         _count++;
+        lanzar.increasePalomasReclutadas();
     }
 
     public int GetCount()
     {
         return _count;
+    }
+
+    private void actualizarPalomas()
+    {
+        if (InfoPalomo.OtraEscena)
+        {
+            for (int i = 0; i < InfoPalomo.GetNumPalomas; i++)
+                AddPigeon();
+            InfoPalomo.OtraEscena = false;
+        }
     }
 }
