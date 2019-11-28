@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PalomoController : MonoBehaviour {
     public float TurnForceMultiplier = 1;
@@ -59,6 +60,9 @@ public class PalomoController : MonoBehaviour {
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.tag.Contains("Ground")) {
             _grounded = true;
+        }
+        if (collision.gameObject.tag.Contains("bullet")) {
+            SceneManager.LoadScene("StartMenu");
         }
     }
 

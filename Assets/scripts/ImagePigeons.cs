@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ImagePigeons : MonoBehaviour {
+    private GameObject _canvas;
     private int _count;
     private GameObject _imageDefault;
     private int _countPigeons;
