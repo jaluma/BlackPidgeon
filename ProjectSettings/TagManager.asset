@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - NPC
+  - MenuElements
+  - Canvas
+  - CanvasOverlay
+  - ImagePigeon
+  - lb_bird
+  - lb_groundTarget
+  - lb_perchTarget
+  - PigeonBullet
+  - poop
+  - Palomo
+  - bullet
+  - Pigeon
   layers:
   - Default
   - TransparentFX

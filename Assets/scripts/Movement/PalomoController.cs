@@ -72,7 +72,7 @@ public class PalomoController : MonoBehaviour {
         _grounded = false;
         _rigidBody.useGravity = false;
 
-        _player.GetComponent<CameraController>().ChangePositionCamera(DistanceFlying);
+        //_player.GetComponent<CameraController>().ChangePositionCamera(DistanceFlying);
     }
 
     public void DisableFly() {
