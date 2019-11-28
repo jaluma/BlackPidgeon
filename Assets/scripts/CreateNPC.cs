@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CreateNPC : MonoBehaviour
 {
@@ -20,21 +21,18 @@ public class CreateNPC : MonoBehaviour
     {
         while (npcCount < 200)
         {
-            if (ObjectPooler.SharedInstance != null)
+            agent = ObjectPooler.SharedInstance.GetPooledObject();
+
+            if (agent != null)
             {
-                agent = ObjectPooler.SharedInstance.GetPooledObject();
-
-                if (agent != null)
-                {
-                    agent.transform.rotation = Quaternion.identity;
-                    agent.transform.position = RandomNavmeshLocation(200);
-                    agent.transform.parent = GameObject.FindGameObjectWithTag("CloneNPC").transform;
-                    agent.SetActive(true);
-                }
-
-                yield return new WaitForSeconds(0.1f);
-                npcCount++;
+                agent.transform.rotation = Quaternion.identity;
+                agent.transform.position = RandomNavmeshLocation(200);
+                agent.transform.parent = GameObject.FindGameObjectWithTag("CloneNPC").transform;
+                agent.SetActive(true);
             }
+
+            yield return new WaitForSeconds(0.1f);
+            npcCount++;
         }
     }
 

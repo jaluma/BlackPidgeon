@@ -10263,6 +10263,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 251055983}
     m_Modifications:
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_Name
+      value: Bush 02 prefab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967263
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.017471
@@ -10318,18 +10330,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.24218976
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_Name
-      value: Bush 02 prefab (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967263
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
@@ -11558,6 +11558,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9da80f587bbf9046aefc4a4cfb8a7fc, type: 3}
+--- !u!1 &476273999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 476274000}
+  m_Layer: 0
+  m_Name: CloneNPC
+  m_TagString: CloneNPC
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &476274000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476273999}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 94.80002, y: 68.68249, z: 106.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &478049500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13793,6 +13823,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 251055983}
     m_Modifications:
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_Name
+      value: Bush 02 prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967263
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.995735
@@ -13848,18 +13890,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.24218976
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_Name
-      value: Bush 02 prefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967263
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
@@ -14650,7 +14680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee539970669b9d449f21cf221fc9421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 3
+  totalTime: 5
   scene: DemoScene
   gvrTimer: 0
   GVRClick:
@@ -19896,6 +19926,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 251055983}
     m_Modifications:
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_Name
+      value: Bush 02 prefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967263
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.726486
@@ -19952,18 +19994,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.24218997
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_Name
-      value: Bush 02 prefab (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967263
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
 --- !u!4 &773218527 stripped
@@ -19985,6 +20015,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1456584412}
     m_Modifications:
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_Name
+      value: Bush 02 prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967263
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5668335
@@ -20040,18 +20082,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.24218976
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_Name
-      value: Bush 02 prefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967263
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
@@ -25538,7 +25568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee539970669b9d449f21cf221fc9421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 3
+  totalTime: 5
   scene: Credits
   gvrTimer: 0
   GVRClick:
@@ -29343,6 +29373,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1456584412}
     m_Modifications:
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_Name
+      value: Bush 02 prefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967263
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.331459
@@ -29398,18 +29440,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.24218976
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_Name
-      value: Bush 02 prefab (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967263
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
@@ -33384,14 +33414,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90.00001
       objectReference: {fileID: 0}
-    - target: {fileID: 4040797355963638, guid: 2224b63330275e5478ef024b2913f937, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 4040797355963638, guid: 2224b63330275e5478ef024b2913f937, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1224574634684750, guid: 2224b63330275e5478ef024b2913f937, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 26
@@ -33399,6 +33421,14 @@ PrefabInstance:
     - target: {fileID: 1224574634684750, guid: 2224b63330275e5478ef024b2913f937, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040797355963638, guid: 2224b63330275e5478ef024b2913f937, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040797355963638, guid: 2224b63330275e5478ef024b2913f937, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2224b63330275e5478ef024b2913f937, type: 3}
@@ -37668,6 +37698,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1456584412}
     m_Modifications:
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_Name
+      value: Bush 02 prefab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967263
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.6068344
@@ -37723,18 +37765,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.24218976
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_Name
-      value: Bush 02 prefab (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967263
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
@@ -39265,6 +39295,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 251055983}
     m_Modifications:
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_Name
+      value: Bush 02 prefab (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967263
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.29
@@ -39320,18 +39362,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.24219005
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_Name
-      value: Bush 02 prefab (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967263
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
@@ -47524,7 +47554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee539970669b9d449f21cf221fc9421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 3
+  totalTime: 5
   scene: Demo Scene
   gvrTimer: 0
   GVRClick:
@@ -50273,7 +50303,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2065328255}
-  - component: {fileID: 2065328256}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -50296,21 +50325,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &2065328256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2065328254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1a27f673a0a85d428daa82048c7d0d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalTime: 0.4
-  reticula: {fileID: 0}
-  distanceOfRay: 10
 --- !u!1 &2066192130
 GameObject:
   m_ObjectHideFlags: 0
