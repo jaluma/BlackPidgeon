@@ -9,11 +9,18 @@ public class Proyectil : MonoBehaviour
     public float Potencia = 10.0f;
     public float Radius = 5.0f;
     public float Upforce = 1.0f;
+
+    public CameraController Camera;
+    public GameObject Palomo;
+    public float VelocidadPalomo = 3F;
+    
+
     AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = this.GetComponent<AudioSource>(); 
+        audioSource = this.GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -26,7 +33,7 @@ public class Proyectil : MonoBehaviour
     {
         Debug.Log(collider.gameObject.name);
         Detonate();
-        Invoke("DelayedDestroy", 0.5F);
+        
     }
     void DelayedDestroy()
     {
@@ -46,5 +53,52 @@ public class Proyectil : MonoBehaviour
             }
         }
         audioSource.Play();
+
+        var r = new System.Random();
+        int n = r.Next(0, colliders.Length);
+        var o = colliders[n].gameObject;
+       
+        //replay
+
+        if(colliders.Length > 2)
+        {
+            while (o.tag.Equals("poop") || o.tag.Equals("Ground"))
+            {
+                n = r.Next(0, colliders.Length);
+                o = colliders[n].gameObject;
+            }
+            Camera.ObjectToFollow = colliders[n].gameObject;
+
+            StartCoroutine(Wait());
+
+            ReplayCollision();
+
+        }
+        else
+        {
+            ReplayCollision();
+        }
+
+        Invoke("DelayedDestroy", 0.5F);
+
+    }
+    //makes the code wait for 2 ingame seconds
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2);
+    }
+
+    /**
+     * Hace que la camara vuelva a seguir a palomo y lo pone en movimiento de nuevo
+     * Velocidad palomo debería de ser la misma que la original
+     */
+    private void ReplayCollision()
+    {
+
+        Camera.ObjectToFollow = Palomo;
+
+        var pController = Palomo.GetComponent<PalomoController>();
+        pController.MaxSpeed = VelocidadPalomo;
+
     }
 }

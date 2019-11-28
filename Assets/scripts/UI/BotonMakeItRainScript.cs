@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class BotonMakeItRainScript : MonoBehaviour, Interactuable
 {
-    public AtaqueAerio ataque;
+    public GameObject ataque;
     public LookingDown lookingScript;
 
     public void Execute()
     {
         lookingScript.HideMenu();
-        ataque.BombaVa();
-        
+        ataque.GetComponent<AtaqueAerio>().BombaVa();
     }
 }

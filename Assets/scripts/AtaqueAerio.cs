@@ -8,6 +8,9 @@ public class AtaqueAerio : MonoBehaviour
     private GameObject _proyectil_Original;
     private GameObject _proyectilNuevo;
 
+    public GameObject Palomo;
+    public GameObject Player;
+
     public float VelocidadProyectil = 10f;
 
     private Rigidbody _rb;
@@ -29,6 +32,14 @@ public class AtaqueAerio : MonoBehaviour
         }*/
         
         _proyectilNuevo = Instantiate(_proyectil_Original);
+
+       
+
+        //replay
+        Palomo.GetComponent<PalomoController>().MaxSpeed = 0;
+        Player.GetComponent<CameraController>().ObjectToFollow = _proyectilNuevo;
+
+
         //_proyectil_Original.SetActive(false);
         _proyectilNuevo.transform.position = transform.position - new Vector3(0, 1, 0);
         _rb = _proyectilNuevo.GetComponent<Rigidbody>();
