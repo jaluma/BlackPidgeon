@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b1a7b6541b1f4740b410903ed9dbd24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 5
+  totalTime: 3
   scene: StartMenu
   gvrTimer: 0
   GVRClick:
@@ -666,7 +666,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Look for 5 seconds to skip
+  m_Text: Look for 3 seconds to skip
 --- !u!222 &1907546834
 CanvasRenderer:
   m_ObjectHideFlags: 0

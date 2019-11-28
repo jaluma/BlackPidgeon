@@ -24,6 +24,7 @@ public class ObjectPooler : MonoBehaviour
             for (int j = 0; j < objectsToPool.Length; j++)
             {
                 GameObject obj = (GameObject)Instantiate(objectsToPool[j]);
+                obj.transform.parent = GameObject.FindGameObjectWithTag("CloneNPC").transform;
                 obj.SetActive(false);
                 pooledObjects.Add(obj);
             }

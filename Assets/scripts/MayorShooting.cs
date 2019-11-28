@@ -29,7 +29,7 @@ public class MayorShooting : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag.Contains("poop"))
+        if (collision.gameObject.tag.Contains("poop") || collision.gameObject.tag.Contains("PigeonBullet"))
         {
             SceneManager.LoadScene("Credits");
         }

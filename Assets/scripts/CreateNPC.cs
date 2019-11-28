@@ -20,17 +20,21 @@ public class CreateNPC : MonoBehaviour
     {
         while (npcCount < 200)
         {
-            agent = ObjectPooler.SharedInstance.GetPooledObject();
-
-            if (agent != null)
+            if (ObjectPooler.SharedInstance != null)
             {
-                agent.transform.rotation = Quaternion.identity;
-                agent.transform.position = RandomNavmeshLocation(200);
-                agent.SetActive(true);
-            }
+                agent = ObjectPooler.SharedInstance.GetPooledObject();
 
-            yield return new WaitForSeconds(0.1f);
-            npcCount++;
+                if (agent != null)
+                {
+                    agent.transform.rotation = Quaternion.identity;
+                    agent.transform.position = RandomNavmeshLocation(200);
+                    agent.transform.parent = GameObject.FindGameObjectWithTag("CloneNPC").transform;
+                    agent.SetActive(true);
+                }
+
+                yield return new WaitForSeconds(0.1f);
+                npcCount++;
+            }
         }
     }
 

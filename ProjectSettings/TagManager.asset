@@ -18,6 +18,8 @@ TagManager:
   - Palomo
   - bullet
   - Pigeon
+  - CloneNPC
+  - BulletCollection
   layers:
   - Default
   - TransparentFX
