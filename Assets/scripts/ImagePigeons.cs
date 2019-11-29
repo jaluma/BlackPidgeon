@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ImagePigeons : MonoBehaviour {
     private GameObject _canvas;
-    private int _count;
     private GameObject _imageDefault;
+    private int _count;
+    private GameObject[] _images;
     private int _countPigeons;
     public LanzarPalomas lanzar;
 
@@ -14,11 +15,11 @@ public class ImagePigeons : MonoBehaviour {
         _canvas = GameObject.FindGameObjectWithTag("CanvasOverlay");
         // disable copy elements
         _countPigeons = GameObject.FindGameObjectsWithTag("Pigeon").Length;
-        var images = GameObject.FindGameObjectsWithTag("ImagePigeon");
-        foreach (GameObject o in images) {
+        _images = GameObject.FindGameObjectsWithTag("ImagePigeon");
+        foreach (GameObject o in _images) {
             o.SetActive(false);
         }
-        _imageDefault = images[0];
+        _imageDefault = _images[0];
         _count = 0;
     }
 
@@ -29,17 +30,9 @@ public class ImagePigeons : MonoBehaviour {
 
     public void AddPigeon() {
         // si es 0 significa que es la primera y hay que activar la de clonación
-        if (_count == 0) {
-            _imageDefault.SetActive(true);
-        } else {
-            if (_count < _countPigeons) {
-                var image = Object.Instantiate(_imageDefault).gameObject;
-                var copy = Instantiate(image, new Vector3(_imageDefault.transform.position.x + _count * 50, _imageDefault.transform.position.y, 0), Quaternion.identity);
-                copy.transform.parent = transform;
-                copy.SetActive(true);
-            }
+        if (_count < _countPigeons) {
+            _images[_count++].SetActive(true);
         }
-        _count++;
         lanzar.increasePalomasReclutadas();
     }
 

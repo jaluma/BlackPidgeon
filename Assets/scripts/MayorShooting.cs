@@ -7,7 +7,7 @@ public class MayorShooting : MonoBehaviour
 {
     public Rigidbody BulletPrefab;
     public GameObject EnemyToShoot;
-    private float _fireRate = 3;
+    private float _fireRate = 1;
     private float _nextFire = 2;
 
     void Update()
@@ -22,7 +22,7 @@ public class MayorShooting : MonoBehaviour
     }
     void ShootBullet()
     {
-        Rigidbody bullet = Instantiate(BulletPrefab, transform.position, new Quaternion()) as Rigidbody;
+        Rigidbody bullet = Instantiate(BulletPrefab, transform.position, transform.rotation) as Rigidbody;
         bullet.transform.parent = GameObject.FindGameObjectWithTag("BulletCollection").transform;
         Destroy(bullet.gameObject, 10f);
     }
