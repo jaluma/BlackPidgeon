@@ -10,30 +10,25 @@ public class Proyectil : MonoBehaviour
     public float Radius = 5.0f;
     public float Upforce = 1.0f;
 
-    public CameraController Camera;
+    public CameraController Player;
     public GameObject Palomo;
-    public float VelocidadPalomo = 3F;
-    
+
 
     AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
         audioSource = this.GetComponent<AudioSource>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
-    void OnTriggerEnter (Collider collider)
+    void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collider.gameObject.name);
         Detonate();
-        
     }
     void DelayedDestroy()
     {
@@ -67,7 +62,7 @@ public class Proyectil : MonoBehaviour
                 n = r.Next(0, colliders.Length);
                 o = colliders[n].gameObject;
             }
-            Camera.ObjectToFollow = colliders[n].gameObject;
+            Player.ObjectToFollow = colliders[n].gameObject;
 
             StartCoroutine(Wait());
 
@@ -95,10 +90,13 @@ public class Proyectil : MonoBehaviour
     private void ReplayCollision()
     {
 
-        Camera.ObjectToFollow = Palomo;
+        Player.ObjectToFollow = Palomo;
 
         var pController = Palomo.GetComponent<PalomoController>();
-        pController.MaxSpeed = VelocidadPalomo;
+        pController.ResetMaxSpeed();
+        Player.GetComponent<CameraController>().ResetPositionCamera();
+
+        Palomo.GetComponent<AtaqueAerio>().Canvas.SetActive(true);
 
     }
 }

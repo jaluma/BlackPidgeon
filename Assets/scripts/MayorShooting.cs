@@ -29,12 +29,4 @@ public class MayorShooting : MonoBehaviour
         bullet.transform.parent = GameObject.FindGameObjectWithTag("BulletCollection").transform;
         Destroy(bullet.gameObject, 10f);
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag.Contains("poop") || collision.gameObject.tag.Contains("PigeonBullet"))
-        {
-            SceneManager.LoadScene("Credits");
-        }
-    }
 }

@@ -14,35 +14,40 @@ public class AtaqueAerio : MonoBehaviour
     public float VelocidadProyectil = 10f;
 
     private Rigidbody _rb;
+    public GameObject Canvas;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        Canvas = GameObject.FindGameObjectWithTag("Canvas");
 
     }
 
     public void BombaVa()
     {
-        _proyectil_Original = GameObject.FindGameObjectWithTag("poop");
-
-        /*if (!_proyectil_Original.activeSelf)
+        if (GameObject.FindGameObjectWithTag("Palomo").GetComponent<PalomoController>().Flying)
         {
-            _proyectil_Original.SetActive(true);
-        }*/
+            _proyectil_Original = GameObject.FindGameObjectWithTag("poop");
+
+            /*if (!_proyectil_Original.activeSelf)
+            {
+                _proyectil_Original.SetActive(true);
+            }*/
+
+            _proyectilNuevo = Instantiate(_proyectil_Original);
+
+            //replay
+            Palomo.GetComponent<PalomoController>().MaxSpeed = 0;
+            Player.GetComponent<CameraController>().ObjectToFollow = _proyectilNuevo;
+
+            Canvas.SetActive(false);
+            Player.GetComponent<CameraController>().ChangePositionCamera(new Vector3(-2f, 1f, -2f));
+
+            //_proyectil_Original.SetActive(false);
+            _proyectilNuevo.transform.position = transform.position - new Vector3(0, 1, 0);
+            _rb = _proyectilNuevo.GetComponent<Rigidbody>();
+            _rb.velocity = new Vector3(0, -VelocidadProyectil, 0);
+        }
         
-        _proyectilNuevo = Instantiate(_proyectil_Original);
-
-       
-
-        //replay
-        Palomo.GetComponent<PalomoController>().MaxSpeed = 0;
-        Player.GetComponent<CameraController>().ObjectToFollow = _proyectilNuevo;
-
-
-        //_proyectil_Original.SetActive(false);
-        _proyectilNuevo.transform.position = transform.position - new Vector3(0, 1, 0);
-        _rb = _proyectilNuevo.GetComponent<Rigidbody>();
-        _rb.velocity = new Vector3(0, -VelocidadProyectil, 0);
     }
 }

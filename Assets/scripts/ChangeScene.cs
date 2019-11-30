@@ -19,8 +19,7 @@ public class ChangeScene : MonoBehaviour
         {
             if (palomas.getCountPalomasReclutadas() >= numMinPalomas)
             {
-                InfoPalomo.GetNumPalomas = palomas.getCountPalomasReclutadas();
-                InfoPalomo.OtraEscena = true;
+                EstadoJuego.OtraEscena = true;
                 SceneManager.LoadScene("TownHallScene");
             }
             else

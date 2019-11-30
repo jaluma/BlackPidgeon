@@ -6,6 +6,7 @@ public class EstadoJuego : MonoBehaviour
 {
     public static EstadoJuego estado;
     public static int numPalomas=0;
+    public static bool OtraEscena;
 
     private void Awake()
     {

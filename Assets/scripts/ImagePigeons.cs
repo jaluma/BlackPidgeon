@@ -8,7 +8,7 @@ public class ImagePigeons : MonoBehaviour {
     private int _count;
     private GameObject[] _images;
     private int _countPigeons;
-    public LanzarPalomas lanzar;
+    private GameObject lanzar;
 
     // Start is called before the first frame update
     void Start() {
@@ -21,6 +21,7 @@ public class ImagePigeons : MonoBehaviour {
         }
         _imageDefault = _images[0];
         _count = 0;
+        lanzar = GameObject.FindGameObjectWithTag("Palomo");
     }
 
     // Update is called once per frame
@@ -33,7 +34,7 @@ public class ImagePigeons : MonoBehaviour {
         if (_count < _countPigeons) {
             _images[_count++].SetActive(true);
         }
-        lanzar.increasePalomasReclutadas();
+        lanzar.GetComponent<LanzarPalomas>().increasePalomasReclutadas();
     }
 
     public int GetCount()
@@ -43,11 +44,13 @@ public class ImagePigeons : MonoBehaviour {
 
     private void actualizarPalomas()
     {
-        if (InfoPalomo.OtraEscena)
+        if (EstadoJuego.OtraEscena)
         {
-            for (int i = 0; i < InfoPalomo.GetNumPalomas; i++)
+            int numPalomas = EstadoJuego.numPalomas;
+            EstadoJuego.numPalomas = 0;
+            for (int i = 0; i < numPalomas; i++)
                 AddPigeon();
-            InfoPalomo.OtraEscena = false;
+            EstadoJuego.OtraEscena = false;
         }
     }
 }

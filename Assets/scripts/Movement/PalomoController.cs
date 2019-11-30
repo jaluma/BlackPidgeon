@@ -7,6 +7,8 @@ public class PalomoController : MonoBehaviour {
     public float MaxSpeedMultiplierWalking = 0.5f;
     public float MaxSpeedMultiplierFlying = 1.0f;
     public float MaxSpeed = 50.0f;
+
+    private float _defaultMaxSpeed;
     //public float StopAngle = -10.0f;
     //public float MoveAngle = 0.0f;
     //public float FlyAngle = 20.0f;
@@ -29,6 +31,8 @@ public class PalomoController : MonoBehaviour {
         _rigidBody = GetComponent<Rigidbody>();
         _mainCamera = Camera.main;
         _player = GameObject.FindGameObjectWithTag("Player");
+
+        _defaultMaxSpeed = MaxSpeed;
 
         //DisableFly();
         //EnableWalk();
@@ -109,6 +113,11 @@ public class PalomoController : MonoBehaviour {
         } else {
             EnableWalk();
         }
+    }
+
+    public void ResetMaxSpeed()
+    {
+        MaxSpeed = _defaultMaxSpeed;
     }
 
 }
