@@ -15,6 +15,7 @@ public class AtaqueAerio : MonoBehaviour
 
     private Rigidbody _rb;
     public GameObject Canvas;
+    public Vector3 Offset = new Vector3(0, 2f, 0);
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,7 @@ public class AtaqueAerio : MonoBehaviour
             Player.GetComponent<CameraController>().ObjectToFollow = _proyectilNuevo;
 
             Canvas.SetActive(false);
-            Player.GetComponent<CameraController>().ChangePositionCamera(new Vector3(-2f, 1f, -2f));
+            Player.GetComponent<CameraController>().ChangePositionCamera(Offset);
 
             //_proyectil_Original.SetActive(false);
             _proyectilNuevo.transform.position = transform.position - new Vector3(0, 1, 0);

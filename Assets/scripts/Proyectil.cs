@@ -24,6 +24,11 @@ public class Proyectil : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.y <= 0)
+        {
+            ReplayCollision();
+            Destroy(this.gameObject);
+        }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -71,6 +76,7 @@ public class Proyectil : MonoBehaviour
         }
         else
         {
+            StartCoroutine(Wait());
             ReplayCollision();
         }
 
