@@ -13,7 +13,7 @@ public class DeathByPoop : MonoBehaviour
         myAnimator = GetComponent<Animator>();        
     }
     private void OnTriggerEnter(Collider other){
-		if(other.CompareTag("Player"))
+		if(other.CompareTag("poop"))
 		{
             myAnimator.SetBool("die",true);
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
